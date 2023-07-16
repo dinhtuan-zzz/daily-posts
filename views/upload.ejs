@@ -1,0 +1,20 @@
+<%- include("header") %>
+
+<section class="container">
+  <form action="/" , method="post">
+    <div class="form-group">
+      <label>Title</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Title"
+        name="title"
+      />
+      <label>Post</label>
+      <textarea class="form-control" rows="5" name="post"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>
+
+<%- include("footer") %>

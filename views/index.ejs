@@ -1,0 +1,17 @@
+<%- include("header") %>
+
+<section class="body">
+  <% posts.forEach(function(post){ %>
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis">
+    <div class="col-lg px-0">
+      <h1 class="display-4 fst-italic"><%= post.title %></h1>
+      <p class="lead my-3"><%= post.content.substring(0, 100) + "..." %></p>
+      <a href="/posts/<%= post.title %>" class="text-body-emphasis"
+        >Continue reading...</a
+      >
+    </div>
+  </div>
+  <% }) %>
+</section>
+
+<%- include("footer") %>
