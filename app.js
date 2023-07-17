@@ -6,7 +6,7 @@ const _ = require("lodash");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-
+const PORT = process.env.PORT || 3030;
 const posts = [
   {
     title: "Day 1",
@@ -60,6 +60,6 @@ app.get("/posts/:postName", function (req, res) {
   }
 });
 
-app.listen(3000, function () {
-  console.log("Server is running...");
+app.listen(PORT, function () {
+  console.log("Server is running on port ${PORT}");
 });
